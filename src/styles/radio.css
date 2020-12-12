@@ -1,0 +1,62 @@
+/* IOS */
+.list-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+input{
+    border-bottom: 1px solid #a8a8a8;
+}
+.list-group-item {
+    user-select: none;
+}
+
+.list-group input[type="checkbox"] {
+    display: none;
+}
+
+.list-group input[type="checkbox"]+.list-group-item {
+    cursor: pointer;
+    border-bottom: 1px solid #a8a8a8;
+
+}
+
+.list-group input[type="checkbox"]+.list-group-item:after {
+    content: "\2713";
+    color: transparent;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.list-group input[type="checkbox"]:checked+.list-group-item {
+    color: #0a60ff;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+.list-group input[type="checkbox"]:checked+.list-group-item:after {
+    color: inherit;
+    padding-left: 180px;
+}
+
+
+/* ANDROID */
+input{
+    margin-left: 230px;
+    margin-bottom: -17px;
+    margin-top: 6px;
+}
+.list-group-item {
+    user-select: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid #a8a8a8;
+
+}
+
+.list-group input[type="radio"]+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group input[type="radio"]:checked+.list-group-item {
+    color:#0a60ff;
+}

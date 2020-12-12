@@ -1,0 +1,36 @@
+html{
+    margin-top: 50px;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+.App{
+    width: 255px;
+    height: 505px;
+    background-color: rgb(238, 231, 231);
+    margin: 0px 550px;
+}
+.btnA{
+    color: white;
+    background-color: rgb(128, 128, 128);
+    padding: "0.5rem 1rem";
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 15px auto 12px;
+}
+.btnI{
+    color: white;
+    background-color: #00B386;
+    padding: "0.5rem 1rem";
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 15px auto 12px;
+}
