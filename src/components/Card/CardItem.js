@@ -14,8 +14,6 @@ const CardItem = (props) => {
     !(header || footer) && `card-body`,
   );
 
-  console.log(classes);
-
   return (
     <div {...props} className={classes}>
       {children}
