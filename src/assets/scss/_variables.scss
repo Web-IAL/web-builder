@@ -1,0 +1,41 @@
+// Color
+$black: #000;
+// ios
+$blue-ios: rgb(0, 122, 255);
+$green-ios: rgb(52, 199, 89);
+$indigo-ios: rgb(88, 86, 214);
+$orange-ios: rgb(255, 149, 0);
+$pink-ios: rgb(255, 45, 85);
+$purple-ios: rgb(175, 82, 222);
+$red-ios: rgb(255, 59, 48);
+$teal-ios: rgb(90, 200, 250);
+$yellow-ios: rgb(255, 204, 0);
+
+// android
+$blue-android: rgb(16, 108, 200);
+
+// Emotion
+$depth0: 0 0 0 0 transparent;
+$depth4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+  0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+$depth8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
+  0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+$depth16: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
+  0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+$depth64: 0 25.6px 57.6px 0 rgba(0, 0, 0, 0.22),
+  0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
+
+$theme-depth: ();
+$theme-depth: map-merge(
+  (
+    'depth-0': $depth0,
+    'depth-4': $depth4,
+    'depth-8': $depth8,
+    'depth-16': $depth16,
+    'depth-64': $depth64,
+  ),
+  $theme-depth
+);
+
+// Card
+$card-border-color: rgba($black, 0.125) !default;

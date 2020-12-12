@@ -1,0 +1,5 @@
+:root {
+  @each $depth, $value in $theme-depth {
+    --#{$depth}: #{$value};
+  }
+}
