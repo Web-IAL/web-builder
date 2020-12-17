@@ -20,7 +20,7 @@ export default function App() {
       </button>
       <hr />
       <Card>
-        <CardItem bordered header>
+        <CardItem bordered header button>
           Header
         </CardItem>
         <CardItem bordered>

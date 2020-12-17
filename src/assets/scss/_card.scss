@@ -1,31 +1,51 @@
 .card {
+  background-color: $card-default-background;
   transition: 1s;
   border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
 
   > &-header + .list-group,
   > .list-group + &-footer {
     border-top: 0;
   }
-}
+  .ios {
+    padding: 10px;
+  }
 
+  .android {
+    padding: 12px;
+  }
+}
 .card-body {
   min-height: 1px;
   padding: 1.25rem;
 }
 
+.card-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+
+.touched {
+  opacity: 0.5;
+}
+
 .card-header,
 .card-footer {
   padding: 0.75rem 1.25rem;
-  margin-bottom: 10px;
   font-size: 1.25rem;
+  // margin-bottom: 10px;
   // border-bottom: 1px solid $card-border-color;
 
   &.ios {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   &.android {
-    font-weight: 900;
+    font-weight: 500;
   }
 }
 

@@ -1,7 +1,17 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+
 import classNames from 'classnames';
 import { OS_CARD } from '.';
 import { ContextOS } from 'store/OSContext';
+
+const propsTypes = {
+  /**
+   * Sets elevation
+   * @type {(0|4|8|16|64)}
+   */
+  depth: PropTypes.number,
+};
 
 const Card = (props) => {
   const { type } = useContext(ContextOS);
@@ -23,5 +33,6 @@ const Card = (props) => {
 };
 
 Card.displayName = 'Card';
+Card.propTypes = propsTypes;
 
 export default Card;
