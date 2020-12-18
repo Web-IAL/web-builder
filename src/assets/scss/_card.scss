@@ -1,8 +1,10 @@
 .card {
   background-color: $card-default-background;
-  transition: 1s;
-  border: 1px solid $card-border-color;
+  
   border-radius: $card-border-radius;
+  border: 1px solid $card-border-color;
+  
+  transition: 1s;
 
   > &-header + .list-group,
   > .list-group + &-footer {
@@ -35,9 +37,11 @@
 
 .card-header,
 .card-footer {
-  padding: 0.75rem 1.25rem;
+  
   font-size: 1.25rem;
-  // margin-bottom: 10px;
+  
+  margin-bottom: 10px;
+  padding: 0.75rem 1.25rem;
   // border-bottom: 1px solid $card-border-color;
 
   &.ios {
@@ -56,6 +60,7 @@
   &.ios {
     border-bottom: 1px solid transparent;
   }
+
   &.card-header.android,
   &.card-footer.android {
     color: $blue-android;
