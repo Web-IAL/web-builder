@@ -15,9 +15,11 @@
 
 .card-header,
 .card-footer {
+  font-size: 1.25rem;
+
   margin-bottom: 10px;
   padding: 0.75rem 1.25rem;
-  font-size: 1.25rem;
+
   // border-bottom: 1px solid $card-border-color;
 
   &.ios {
@@ -36,6 +38,7 @@
   &.ios {
     border-bottom: 1px solid transparent;
   }
+
   &.card-header.android,
   &.card-footer.android {
     color: $blue-android;
