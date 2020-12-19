@@ -12,7 +12,7 @@ $teal-ios: rgb(90, 200, 250);
 $yellow-ios: rgb(255, 204, 0);
 
 // android
-$blue-android: rgb(16, 108, 200);
+$blue-android: #3f51b5;
 
 // Emotion
 $depth0: 0 0 0 0 transparent;
@@ -38,4 +38,6 @@ $theme-depth: map-merge(
 );
 
 // Card
-$card-border-color: rgba($black, 0.125) !default;
+$card-default-background: #fff !default;
+$card-border-color: #ccc !default;
+$card-border-radius: 2px;
