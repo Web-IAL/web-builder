@@ -1,128 +1,68 @@
-import React from "react";
-// import ReactDom from "react-dom";
+import React, { useState } from "react";
+import Spinner from "./components/spinner";
+import Badger from "./components/badge";
+import Radio from "./components/radiobutton";
+import Text from "./components_header/Text";
+import Button from "./components_header/Button";
+import IconLeft from "./components_header/LeftIcon";
+import MenuLeft from "./components_header/MenuLeft";
 
-import Button from "./Button";
-import Header from "./components-header/Header";
-import Title from "./components-header/Title";
-import Subtitle from "./components-header/Subtitle";
-import Text from "./components-header/Text";
-import IconLeft from "./components-header/IconLeft";
-import IconMenu from "./components-header/IconMenu";
-import TestButton from "./button1";
+import Card from "./components_card/card";
+import CardItem from "./components_card/cardItem";
 
-import CardItem from "./components-cards/CardItem";
-import Card from "./components-cards/Card";
+import "./styles/App.css";
 
-import "./App.css";
-import { DistributeVertical } from "react-bootstrap-icons";
+function App() {
+  const [isAndroid, setIsAndroid] = useState(true);
 
-export default function App() {
+  const data = [
+    { title: "Text1", value: 1 },
+    { title: "Text2", value: 2 },
+  ];
+
   return (
     <div className="App">
-      {/* Header */}
-      <Header>Header</Header>
-      <Header android>Header</Header>
+      <button
+        className={!isAndroid ? "btnI" : "btnA"}
+        onClick={() => setIsAndroid(false)}
+      >
+        IOS
+      </button>
+      <button
+        className={isAndroid ? "btnI" : "btnA"}
+        onClick={() => setIsAndroid(true)}
+      >
+        ANDROID
+      </button>
 
-      {/* Title */}
-      <Title>Title</Title>
-      <Title android>Title</Title>
+      <Text color="blue">Header</Text>
 
-      {/* Subtitle */}
-      <Subtitle>Subtitle</Subtitle>
-      <Subtitle android>Subtitle</Subtitle>
+      <MenuLeft ios={!isAndroid}></MenuLeft>
+      <IconLeft ios={!isAndroid}></IconLeft>
 
-      <Card >
-        <CardItem header >
-          <Text CardHeader>CardItemHeader</Text>
+      <Card>
+        <CardItem ios={!isAndroid} >
+        <Text >Header</Text>
         </CardItem>
-        <CardItem >
-          <Text body>
-            {" "}
-            NativeBase is made from effective building blocks referred to as
-            components. The Components are constructed in pure React Native
-            platform along with some JavaScript functionality with rich set of
-            customisable properties. These components allow you to quickly build
-            the perfect interface
-          </Text>
+        <CardItem ios={!isAndroid}>
+          <Text>Body</Text>
         </CardItem>
-        <CardItem footer>
-          <Text CardHeader>CardItemFooter</Text>
-        </CardItem>
-      </Card>
-
-
-
-      <Card >
-        <CardItem header bordered >
-          <Text CardHeader>CardItemHeader</Text>
-        </CardItem>
-        <CardItem bordered>
-          <Text body>
-            {" "}
-            NativeBase is a free and open source framework that enable
-            developers to build
-            high-quality mobile apps using React Native iOS and Android
-            apps with a fusion of ES6.
-          </Text>
-        </CardItem>
-        <CardItem footer bordered>
-          <Text CardHeader>CardItemFooter</Text>
+        <CardItem ios={!isAndroid} >
+          <Text>Footer</Text>
         </CardItem>
       </Card>
 
-      <Text>Back</Text>
-      <Text>Cancel</Text>
-      <Text android>Cancel</Text>
+      <Button ios={!isAndroid} bordered color="danger">
+        <Text color="danger" size="14px" weight="500">
+          Danger
+        </Text>
+      </Button>
 
-      <IconLeft></IconLeft>
-      <IconLeft ios></IconLeft>
-
-      <IconMenu android></IconMenu>
-
-
-      <Button light>light</Button>
-      <Button light and>light</Button>
-
-      <Button info>Info</Button>
-      <Button info and>Info</Button>
-
-
-      <Button primary>Primary</Button>
+      <Spinner ios={!isAndroid} color="blue" />
+      <Badger color="primary" count={5} />
+      <Radio ios={!isAndroid} data={data} color="green" />
     </div>
   );
 }
 
-// import React, { useState } from "react";
-// import "./App.css";
-// import Header from "./components-header/Header";
-
-
-// function App() {
-//   const [isAndroid, setIsAndroid] = useState(true);
-
-
-//   return (
-//     <div className="App">
-//       <button
-//         className={!isAndroid ? "btnI" : "btnA"}
-//         onClick={() => setIsAndroid(false)}
-//       >
-//         IOS
-//       </button>
-//       <button
-//         className={isAndroid ? "btnI" : "btnA"}
-//         onClick={() => setIsAndroid(true)}
-//       >
-//         ANDROID
-//       </button>
-//       <Header ></Header>
-//       <Card>
-//         <CardItem></CardItem>
-//       </Card>
-//       {/* <Button>light</Button> */}
-//       {/* <Button ios={!isAndroid} primary>Primary</Button> */}
-//     </div>
-//   );
-// }
-
-// export default App;
+export default App;
